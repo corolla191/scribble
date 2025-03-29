@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic meta tags and title -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Custom Scribble Graph</title>
+    <link rel="icon" type="image/png" href="img/custom-icon.png">
+</head>
+
+<body>
+    <!-- Main application container -->
+    <div id="main">
+        <!-- Application header with title -->
+        <header id="brand">
+            <h1>Scribble Graph</h1>
+        </header>
+        
+        <!-- Canvas section containing both graph and drawing canvases -->
+        <section id="canvasWrapper">
+            <canvas id="myCanvas"></canvas>      <!-- Main graph canvas -->
+            <canvas id="myDrawCanvas"></canvas>  <!-- Drawing overlay canvas -->
+        </section>
+        
+        <!-- Modal for adjusting graph values -->
+        <section id="sliderWrap">
+            <div id="sliders"></div>
+        </section>
+        
+        <!-- Drawing controls section -->
+        <section id="controls">
+            <p>Hold Shift to fill shapes</p>
+            
+            <!-- Line width selector -->
+            <label for="selectLine">Stroke:</label>
+            <select id="selectLine">
+                <option value="1">Thin</option>
+                <option value="4">Medium</option>
+                <option value="7">Thick</option>
+            </select>
+            
+            <!-- Stroke color selector -->
+            <label for="selectCol">Color:</label>
+            <select id="selectCol">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="orange">Orange</option>
+            </select>
+            
+            <!-- Fill color selector -->
+            <label for="selectFill">Fill:</label>
+            <select id="selectFill">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            
+            <!-- Control buttons -->
+            <button id="clearbutton">Clear</button>
+            <button id="changeVal">Change Values</button>
+            <button id="snapShot">Take Snapshot</button>
+            <button id="delRoll">Delete Roll</button>
+        </section>
+        
+        <!-- Snapshot roll section -->
+        <section id="roll"></section>
+        
+        <!-- Notification toast section -->
+        <section id="toast"></section>
+    </div>
+    
+    <!-- Footer with copyright -->
+    <footer>
+        <p id="copy">&copy; MM 2016</p>
+    </footer>
+    
+    <!-- JavaScript dependencies -->
+    <script src="js/lightbox.js"></script>  <!-- Lightbox functionality for snapshots -->
+    <script src="js/graph.js"></script>     <!-- Graph drawing and data management -->
+    <script src="js/draw.js"></script>      <!-- Drawing canvas functionality -->
+    <script src="js/main.js"></script>      <!-- Application initialization -->
+</body>
+
+</html>
